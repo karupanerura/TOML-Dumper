@@ -44,7 +44,7 @@ sub add {
     }
 
     if (defined $type && $self->{type} ne $type) {
-        my $name = TOML::Dump::Name::join(@{ $self->{name} });
+        my $name = TOML::Dumper::Name::join(@{ $self->{name} });
         die "TOML array can contain each type of all values. ($name = $type)";
     }
 

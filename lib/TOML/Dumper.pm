@@ -16,6 +16,7 @@ sub dump :method {
         @{ $self->boolean_classes || [] },
     );
     my $body = TOML::Dumper::Context->new($object)->as_string;
+    $body =~ s/\A\n+//msg;
     $body =~ s/\n{3,}/\n\n/msg;
     return $body;
 }
@@ -36,7 +37,7 @@ TOML::Dumper - It's new $module
     my $out = TOML::Dumper->new->dump({ my => { data => [is => 'here'] } });
     # $out =>
     # [my]
-    # data => ["is", "here"]
+    # data = ["is", "here"]
 
 =head1 DESCRIPTION
 

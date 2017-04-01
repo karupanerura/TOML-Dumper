@@ -36,7 +36,10 @@ my $data = {
                 {
                     nest2 => [[1, 2, 3], [{}]]
                 }
-            ]
+            ],
+            nest3 => {
+                nest4 => { nest5 => [[1],[[[[2],[3,4]],[5]],[6]]] },
+            },
         },
     ],
 };
@@ -76,6 +79,11 @@ string = "wai \twai"
 
 [[array_of_table.nest]]
 nest2 = [[1, 2, 3], [{}]]
+
+[array_of_table.nest3]
+
+[array_of_table.nest3.nest4]
+nest5 = [[1], [[[[2], [3, 4]], [5]], [6]]]
 
 [hash]
 integer = 12
