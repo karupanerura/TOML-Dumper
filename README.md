@@ -9,7 +9,7 @@ TOML::Dumper - It's new $module
     my $out = TOML::Dumper->new->dump({ my => { data => [is => 'here'] } });
     # $out =>
     # [my]
-    # data => ["is", "here"]
+    # data = ["is", "here"]
 
 # DESCRIPTION
 
@@ -24,4 +24,4 @@ it under the same terms as Perl itself.
 
 # AUTHOR
 
-karupanerura &lt;karupa@cpan.org>
+karupanerura <karupa@cpan.org>
